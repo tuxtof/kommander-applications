@@ -23,7 +23,7 @@ ARG ASDF_VERSION
 RUN git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v${ASDF_VERSION}
 RUN echo ". ${HOME}/.asdf/asdf.sh" >> ${HOME}/.bashrc
 
-RUN --mount=type=bind,target=/tmp/kommander-cli,readwrite=true \
+RUN --mount type=bind,target=/tmp/kommander-cli,readwrite=true \
     cd /tmp/kommander-cli && \
     bash -ec ". ~/.asdf/asdf.sh && make install-tools && \
               pre-commit install -t pre-commit -t commit-msg --install-hooks"
