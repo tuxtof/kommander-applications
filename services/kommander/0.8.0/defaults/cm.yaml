@@ -66,15 +66,7 @@ data:
         image:
           tag: ${kommanderLicensingControllerWebhookImageTag}
           repository: ${kommanderLicensingControllerWebhookImageRepository}
-      defaultEnterpriseApps:
-      - "centralized-kubecost"
-      - "kubecost"
-      - "kubecost-thanos-traefik"
-      - "centralized-grafana"
-      - "karma"
-      - "karma-traefik"
-      - "prometheus-thanos-traefik"
-      - "thanos"
+      defaultEnterpriseApps: []
     kommander-ui:
       enabled: false
     capimate:
@@ -105,16 +97,4 @@ data:
     - "traefik-forward-auth-mgmt"
     attached:
       prerequisites:
-        defaultApps:
-        - "reloader"
-        - "traefik"
-        - "kubernetes-dashboard"
-        - "kubecost"
-        - "kube-prometheus-stack"
-        - "prometheus-adapter"
-        - "prometheus-thanos-traefik"
-        - "kubecost-thanos-traefik"
-        - "cert-manager"
-        - "karma-traefik"
-        - "gatekeeper"
-        - "kommander-flux"
+        defaultApps: []
